@@ -1,0 +1,26 @@
+<%-include('./partials/head'); %>
+  <body>
+    <%-include('./partials/navbar'); %>
+      <div class="container">
+          <h1 class="text-center">
+              Merge Multiple Videos Online
+          </h1>
+          <form action="/mergevideos" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input class="form-control" type="file" name="file" id="" accept="video/*" multiple required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-danger">
+                    Merge and Download Video
+                </button>
+            </div>
+        </form>
+        <br><br>
+        <%-include('./partials/jumbotron');%>
+        <%-include('./partials/youtubeVideo');%>
+        <%-include('./partials/profile');%>
+        <%-include('./partials/footer');%>
+      </div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
